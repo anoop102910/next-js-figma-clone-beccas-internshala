@@ -1,18 +1,28 @@
-import Image from "next/image";
 import React from "react";
+import Navbar from "@/components/Navbar";
+import Home from "@/components/Home";
+import About from "@/components/About";
+import Features from "@/components/Features";
+import Benefit from "@/components/Benefit";
+import Review from "@/components/Review";
+import Footer from "@/components/Footer";
 
-function Home() {
+function App() {
   return (
-    <div className="md:flex  justify-between items-center">
-      <div className="md:w-[40%] relative">
-        <h1 className="text-6xl font-bold leading-[3.8rem] bg-title">Better Design for your digital products</h1>
-        <p className="text-lg mt-10">
-          Turning your Idea into Reality. We bring together the teams from Industry
-        </p>
-        <button className="bg-green-700 px-4 py-2 roumd text-sm rounded-md mt-4 text-white hover:-translate-y-1 transition-all">See our works</button>
-      </div>
-      <Image className="animate-float" width="600" height="600" src="/hero2.png" alt="" />
+    <div className="min-h-screen bg-gradient-to-br from-green-200 to-white  ">
+      <section className="max-w-[1000px] px-4 md:px-8 mx-auto">
+        <Navbar />
+        <Home />
+        <About />
+        <Features />
+        <Benefit />
+      </section>
+      <section className="bg-secondary-200 px-4 md:px-32 text-white">
+        <Review />
+        <Footer/>
+      </section>
     </div>
   );
 }
-export default Home;
+
+export default App;
